@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    backstage.io/kubernetes-id: {{ .Chart.Name }}
+spec:
+  defaultBackend:
+    service:
+      name: {{ .Chart.Name }}
+      port:
+        number: {{ .Values.specs.ingress.port }}
+  tls:
+    - secretName: wildcard-certificate
+      hosts:
+      - {{ .Values.specs.ingress.publicUrl }}
+  rules:
+    - host: {{ .Values.specs.ingress.publicUrl }}
+      http:
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+              backend:
+                service:
+                  name: {{ .Chart.Name }}
+                  port:
+                    number: {{ .Values.specs.ingress.port }}

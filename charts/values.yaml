@@ -1,0 +1,16 @@
+replicaCount: 1
+image:
+  repository: gcr.io/kubernetescluster-265514/info-request
+  tag: "snapshot"
+
+publicUrl: "challenge.com"
+
+specs:
+  ingress:
+    publicUrl: challenge.com
+    port: 3000
+  service:
+    name: http
+    port: 3000
+    protocol: TCP
+    type: ClusterIP
