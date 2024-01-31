@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: gcr.io/kubernetescluster-265514/info-request
+  repository: challenge12.azurecr.io/challenge
   tag: "snapshot"
 
 publicUrl: "challenge.com"
