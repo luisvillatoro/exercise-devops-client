@@ -12,7 +12,7 @@ specs:
     name: http
     port: 80
     protocol: TCP
-    type: LoadBalancer
+    type: ClusterIP
 
 env:
-  REACT_APP_API_URL: "http://challengedevops-server.duckdns.org:80"
+  REACT_APP_API_URL: "challenge-server.svc:8080"
