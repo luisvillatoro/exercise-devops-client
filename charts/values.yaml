@@ -1,16 +1,15 @@
 replicaCount: 1
 image:
   repository: challenge12.azurecr.io/challenge
-  tag: "snapshot"
 
-publicUrl: "challenge.com"
+publicUrl: "challengedevops.duckdns.org"
 
 specs:
   ingress:
-    publicUrl: challenge.com
+    publicUrl: challengedevops.duckdns.org
     port: 3000
   service:
     name: http
     port: 3000
     protocol: TCP
-    type: ClusterIP
+    type: LoadBalancer
