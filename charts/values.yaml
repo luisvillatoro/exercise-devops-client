@@ -15,4 +15,4 @@ specs:
     type: LoadBalancer
 
 env:
-  REACT_APP_API_URL: "http://challengedevops-server.duckdns.org:5000"
+  REACT_APP_API_URL: "http://challengedevops-server.duckdns.org:80"
