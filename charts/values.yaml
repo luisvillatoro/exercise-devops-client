@@ -13,3 +13,6 @@ specs:
     port: 80
     protocol: TCP
     type: LoadBalancer
+
+env:
+  REACT_APP_API_URL: "http://challengedevops-server.duckdns.org:5000"

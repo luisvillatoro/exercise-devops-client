@@ -20,7 +20,7 @@ spec:
           image: "{{ .Values.image.repository }}"
           env:
             - name: REACT_APP_API_URL
-              value: "challengedevops-server.duckdns.org"
+              value: {{ .Values.env.REACT_APP_API_URL }}
           ports:
             - containerPort: 80
               protocol: TCP
