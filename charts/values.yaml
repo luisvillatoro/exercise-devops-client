@@ -15,4 +15,4 @@ specs:
     type: ClusterIP
 
 env:
-  REACT_APP_API_URL: "challenge-server.svc:8080"
+  REACT_APP_API_URL: "http://challenge-server.default.svc:8080"
